@@ -59,7 +59,10 @@
 
     </style>
     <div class="block">
-        <div id="txtname" class="txtname"></div>
+        <div id="txtname" class="txtname">имя</div>
+        <div id="bl_img" class="bl_img">
+
+        </div>
         <!-- <div class="txtname1">имя</div> -->
         <!-- <img class="photo" src="https://t.me/i/userpic/320/SFpgeARaTEd_wHF7K7LG0i-Qoe-MdK8VanbSKatkz6c.svg"> -->
     </div>
@@ -76,8 +79,9 @@
         var elem = document.getElementById('txtname');
         elem.innerHTML = user_name;
         setTimeout(() => {
-            document.querySelector('.block').innerHTML = `<img class="photo" src="${photo_user}">`
-        }, 5000);
+            document.querySelector('#bl_img').innerHTML = `<img class="photo" src="${photo_user}">`
+        }, 1000);
+        
 
 
     </script>
