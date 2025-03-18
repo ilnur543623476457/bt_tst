@@ -60,8 +60,8 @@
     </style>
     <div class="block">
         <div class="txtname">имя</div>
-        <div class="txtname1">имя</div>
-        <!-- <img class="photo" src=""> -->
+        <!-- <div class="txtname1">имя</div> -->
+        <img class="photo" src="https://t.me/i/userpic/320/SFpgeARaTEd_wHF7K7LG0i-Qoe-MdK8VanbSKatkz6c.svg">
     </div>
 
 
@@ -72,9 +72,8 @@
         var user_name = tg.initDataUnsafe.user.username
         var photo_user = tg.initDataUnsafe.user.photo_url
         $('.txtname').text(user_name)
-        $('.txtname1').text(photo_user)
-
-        // document.querySelector('.block').innerHTML = `<img class="photo" src="${photo_user}">`
+        // $('.txtname1').text(photo_user)
+        document.querySelector('.block').innerHTML = `<img class="photo" src="${photo_user}">`
 
 
     </script>
