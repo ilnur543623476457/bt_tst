@@ -40,6 +40,7 @@
             width: fit-content;
             top: 10px;
             font-size: 30px;
+            color: black;
         }
 
         .photo{
@@ -59,7 +60,8 @@
     </style>
     <div class="block">
         <div class="txtname">имя</div>
-        <img class="photo" src="">
+        <div class="txtname1">имя</div>
+        <!-- <img class="photo" src=""> -->
     </div>
 
 
@@ -67,14 +69,12 @@
         const tg = window.Telegram.WebApp;
         tg.expand();
 
-
         var user_name = tg.initDataUnsafe.user.username
         var photo_user = tg.initDataUnsafe.user.photo_url
+        $('.txtname').text(user_name)
+        $('.txtname1').text(photo_user)
 
-        document.querySelector('.txtname').innerText = user_name
-
-
-        document.querySelector('.block').innerHTML = `<img class="photo" src="${photo_user}">`
+        // document.querySelector('.block').innerHTML = `<img class="photo" src="${photo_user}">`
 
 
     </script>
