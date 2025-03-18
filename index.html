@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous">
+    </script>
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: aquamarine;
+        }
+        .block{
+            position: absolute;
+            width: 300px;
+            height: 400px;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .txtname{
+            position: relative;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: fit-content;
+            top: 10px;
+            font-size: 30px;
+        }
+
+        .photo{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            left: 0;
+            right: 0;
+            margin: 68px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+
+
+    </style>
+    <div class="block">
+        <div class="txtname">имя</div>
+        <img class="photo" src="">
+    </div>
+
+
+    <script>
+        const tg = window.Telegram.WebApp;
+        tg.expand();
+
+
+        var user_name = tg.initDataUnsafe.user.username
+        var photo_user = tg.initDataUnsafe.user.photo_url
+
+        document.querySelector('.txtname').innerText = user_name
+
+
+        document.querySelector('.block').innerHTML = `<img class="photo" src="${photo_user}">`
+
+
+    </script>
+    
+</body>
+</html>
