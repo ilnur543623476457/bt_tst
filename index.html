@@ -60,7 +60,7 @@
     </style>
     <div class="block">
         <div id="txtname" class="txtname">имя</div>
-        <div id="txtname" class="txtname">имя</div>
+        <button onclick="test()">Открыть</button>
         <div id="bl_img" class="bl_img">
 
         </div>
@@ -81,8 +81,11 @@
         elem.innerHTML = user_name;
         setTimeout(() => {
             document.querySelector('#bl_img').innerHTML = `<img class="photo" src="${photo_user}">`
-            WebApp.openTelegramLink('tg://resolve?domain=Anchous_08&text=🤚')
         }, 1000);
+
+        function test(){
+            tg.openTelegramLink('tg://resolve?domain=Anchous_08&text=🤚')
+        }
         
 
 
