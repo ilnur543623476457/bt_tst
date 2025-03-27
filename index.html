@@ -60,9 +60,10 @@
     </style>
     <div class="block">
         <div id="txtname" class="txtname">имя</div>
-<!--         <div id="txtname1" class="txtname">имя</div> -->
-        <button onclick="test()">Открыть</button>
-        <div id="bl_img" class="bl_img">
+        <div id="txtname1" class="txtname">имя</div>
+        <div id="txtname2" class="txtname">имя</div>
+<!--         <button onclick="test()">Открыть</button>
+        <div id="bl_img" class="bl_img"> -->
 
         </div>
         <!-- <div class="txtname1">имя</div> -->
@@ -82,17 +83,19 @@
         // $('.txtname1').text(photo_user)
         var elem = document.getElementById('txtname');
         elem.innerHTML = user_id;
-        // var elem1 = document.getElementById('txtname1');
-        // elem1.innerHTML = user_name;
-        setTimeout(() => {
-            document.querySelector('#bl_img').innerHTML = `<img class="photo" src="${photo_user}">`
-        }, 1000);
+        var elem1 = document.getElementById('txtname1');
+        elem1.innerHTML = user_name;
+        var elem1 = document.getElementById('txtname2');
+        elem1.innerHTML = photo_user;
+        // setTimeout(() => {
+        //     document.querySelector('#bl_img').innerHTML = `<img class="photo" src="${photo_user}">`
+        // }, 1000);
 
-        function test(){
-            alert('ok')
-            // window.open('tg://resolve?domain=Anchous_08&text=🤚')
-            window.open('http://t.me/An8')
-        }
+        // function test(){
+        //     alert('ok')
+        //     // window.open('tg://resolve?domain=Anchous_08&text=🤚')
+        //     window.open('http://t.me/An8')
+        // }
         
 
 
