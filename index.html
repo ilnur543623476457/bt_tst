@@ -60,7 +60,7 @@
         <div id="txtname" class="txtname">имя</div>
         <div id="txtname1" class="txtname">имя</div>
         <div id="txtname2" class="txtname">имя</div>
-        <button onclick="test()">Открыть</button>
+        <button id="run" onclick="test()">Открыть</button>
 
        
         
@@ -105,6 +105,7 @@
         //     // window.open('tg://resolve?domain=Anchous_08&text=🤚')
         //     window.open('http://t.me/An8')
         }
+        document.getElementById('run').addEventListener("click", test);
         
 
 
