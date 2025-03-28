@@ -60,7 +60,8 @@
         <div id="txtname" class="txtname">имя</div>
         <div id="txtname1" class="txtname">имя</div>
         <div id="txtname2" class="txtname">имя</div>
-        <button id="bnt">Открыть</button>
+        <button onclick="test">Открыть</button>
+
        
         
         <!--<div id="bl_img" class="bl_img"> -->
@@ -92,18 +93,18 @@
         //     document.querySelector('#bl_img').innerHTML = `<img class="photo" src="${photo_user}">`
         // }, 1000);
 
-        $('#bnt').on('click', () => {
-            tg.sendData('helllo world')
-            tg.close()
-        })
-        // function test(){
-            
-        //     alert('ok')
+        // $('#bnt').on('click', () => {
         //     tg.sendData('helllo world')
         //     tg.close()
-        // //     // window.open('tg://resolve?domain=Anchous_08&text=🤚')
-        // //     window.open('http://t.me/An8')
-        // }
+        // })
+        function test(){
+            
+            alert('ok')
+            tg.sendData('helllo world')
+            tg.close()
+        //     // window.open('tg://resolve?domain=Anchous_08&text=🤚')
+        //     window.open('http://t.me/An8')
+        }
         
 
 
