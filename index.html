@@ -75,9 +75,17 @@
 
     <script>
 
-        let params = new URLSearchParams(document.location.search);
-        // let value = params.get('startapp')
-        console.log(params)
+        const searchString = new URLSearchParams(window.location.search);
+        
+        const params = [];
+        
+        searchString.forEach((value) => {
+          params.push(value);
+        });
+        
+        const result = params.join(':');
+        
+        console.log(result);
         
         const tg = window.Telegram.WebApp;
         tg.expand();
