@@ -75,33 +75,43 @@
 
     <script>
 
-        const searchString = new URLSearchParams(window.location.search);
-        
-        const params = [];
-        
-        searchString.forEach((value) => {
-          params.push(value);
-        });
-        
-        const result = params.join(':');
-        
-        console.log(result);
-        
         const tg = window.Telegram.WebApp;
         tg.expand();
 
+        const searchString = new URLSearchParams(window.location.search);
+        const params = [];
+        searchString.forEach((value) => {
+          params.push(value);
+        });
+        const result = params.join(':');
+        console.log(result);
+        if (result) {
+            var photo_user = tg.initDataUnsafe.user.photo_url
+            const user_id = result //tg.initDataUnsafe.user.id
+            const user_name = tg.initDataUnsafe.user.username
+            var elem = document.getElementById('txtname');
+            elem.innerHTML = user_id;
+            var elem1 = document.getElementById('txtname1');
+            elem1.innerHTML = user_name;
+            var elem1 = document.getElementById('txtname2');
+            elem1.innerHTML = photo_user;
+        } else {
+            var photo_user = tg.initDataUnsafe.user.photo_url
+            const user_id = tg.initDataUnsafe.user.id
+            const user_name = tg.initDataUnsafe.user.username
+            var elem = document.getElementById('txtname');
+            elem.innerHTML = user_id;
+            var elem1 = document.getElementById('txtname1');
+            elem1.innerHTML = user_name;
+            var elem1 = document.getElementById('txtname2');
+            elem1.innerHTML = photo_user;
+        }
+            
+        
+
+
         // var user_name = tg.initDataUnsafe.user.username
-        var photo_user = tg.initDataUnsafe.user.photo_url
-        const user_id = tg.initDataUnsafe.user.id
-        const user_name = tg.initDataUnsafe.user.username
-        // $('.txtname').text(user_name)
-        // $('.txtname1').text(photo_user)
-        var elem = document.getElementById('txtname');
-        elem.innerHTML = user_id;
-        var elem1 = document.getElementById('txtname1');
-        elem1.innerHTML = user_name;
-        var elem1 = document.getElementById('txtname2');
-        elem1.innerHTML = photo_user;
+
         // setTimeout(() => {
         //     document.querySelector('#bl_img').innerHTML = `<img class="photo" src="${photo_user}">`
         // }, 1000);
