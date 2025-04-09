@@ -61,6 +61,7 @@
         <div id="txtname1" class="txtname">имя</div>
         <div id="txtname2" class="txtname">имя</div>
         <button id="run" onclick="test()">Открыть</button>
+        <button id="run" onclick="test1()">получить</button>
 
        
         
@@ -74,6 +75,9 @@
 
 
     <script>
+
+
+        localStorage.setItem('idClient', '2')
 
         const tg = window.Telegram.WebApp;
         tg.expand();
@@ -129,6 +133,16 @@
         //     window.open('http://t.me/An8')
         }
         document.getElementById('run').addEventListener("click", test);
+
+
+        function test1(){
+            const name = localStorage.getItem('idClient')
+            alert(name)
+
+        //     // window.open('tg://resolve?domain=Anchous_08&text=🤚')
+        //     window.open('http://t.me/An8')
+        }
+        document.getElementById('run').addEventListener("click", test1);
         
 
 
